@@ -1,0 +1,30 @@
+<section>
+
+ 
+
+    <div class="col-md-3" class="card estilo-c" *ngFor="let item of productos">
+      <a [routerLink]="['/item', item.idProductos]">
+        <div class="img-container">
+          <img src="../assets/{{item.imagen}}" alt="producto 1" >
+          
+        </div>
+       </a>
+      <div class="info-container">
+        <h3>{{item.nombre}}</h3>
+        <strong>{{item.precio}}</strong>
+        <span class="rating">★★★★☆</span>
+      
+      </div>
+    </div>
+
+ 
+    
+    
+</section>
+
+
+
+
+
+
+

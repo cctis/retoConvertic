@@ -1,0 +1,84 @@
+<div>
+  <div class="ae-container-fluid rk-topbar">
+    <h1 class="rk-logo">
+      <a routerLink="/home"><img class="logo" src="../assets/img/logo.png" alt=""></a>
+    </h1>
+          
+    <h1 class="rk-logo">
+      <a routerLink="/home">ConverticShop</a>
+    </h1>
+  
+</div>
+    <body>
+      <div class="container">
+      <article>
+        <h2 class="product-title">{{productos.nombre}}</h2>
+
+         <div class="container_1">
+        <img src="../assets/{{productos.imagen}}" 
+             alt="Chuck Taylor All Shoes"
+             width="250"
+             height="250"
+             />
+        <p>
+        </div>
+          <div class="container_2">
+            <div class="internal_row">
+          <strong>precio: <small>{{productos.precio | number}}</small></strong>
+        <p class="shipping">seccion: <small>{{productos.genero.genero}}</small></p>
+          </div>
+        
+        <p class="statement">descripcion: <small>{{productos.descripcion}}</small>
+        </p>
+        <p class="sale">SALE</p>
+        
+        <div >
+        <div>color: <small>{{productos.color.color}}</small></div>
+        <br>
+        <div>marca: <small>{{productos.marca.marca}}</small></div>
+        <br>
+
+        <div>cantidad Disponible: <small>{{productos.cantidadDisponible}}</small></div>
+        <br>
+        <div class="form-group">
+          <label>Cantidad deseada</label>
+          <input type="number"  class="form-control"  [(ngModel)]="cantidad">
+      </div>
+      <br>
+      <br>
+        </div>
+        </div>
+        
+          <div class="container_3">
+            
+        <h3 class="product-detail">Products Details</h3>
+        
+        <div >
+          <label>Tallas</label>
+          <select name="tallas" id="tallas" class="form-control" [(ngModel)]="tallaSeleccionada">
+          <option [ngValue]="item" *ngFor="let item of tallas">{{ item.talla }}</option></select>
+          
+      </div>
+        </div>
+       
+        <button class="cart" type="submit" (click)="agregarCarrito()">Add to cart</button>
+      </article>
+      </div>
+      
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

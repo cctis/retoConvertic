@@ -1,0 +1,61 @@
+<div class="container">
+
+    <form id="signup" [formGroup]="loginForm">
+
+        <div class="header">
+        
+            
+            
+            
+
+                <h1 class="rk-logo">
+                    <a routerLink="/home"><img class="carrito" src="assets/img/log.png" alt=""></a>
+
+                    
+                  </h1>
+
+            
+            
+        </div>
+
+        <div>
+            <h3 class="nombre">Login</h3>
+        </div>
+
+        
+        <div class="sep"></div>
+
+        <div class="inputs">
+        
+            <input type="email" placeholder="e-mail" autofocus formControlName="correo" class="form-control" autocomplete="on"/>
+        
+            <input type="password" placeholder="Password" formControlName="contrasena" class="form-control"/>
+            
+            <div class="checkboxy">
+                <input name="cecky" id="checky" value="1" type="checkbox" /><label class="terms">Acepto terminos y condiciones</label>
+            </div>
+
+            
+            <div>
+            
+                <app-registro #contenido></app-registro>
+            
+            </div>
+
+            
+            <button type="button" id="submit" class="btn btn-outline-primary" (click)="consultar()">Ingresar</button>
+            
+        
+        </div>
+
+    </form>
+
+</div>
+
+<div class="" *ngIf="modalSwitch == true" >
+    <app-registro></app-registro>
+</div>
+
+<div class="imagen2">
+    <img src="assets/img/post-inner-1.jpg" alt="">
+</div>
